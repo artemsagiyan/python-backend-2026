@@ -23,7 +23,7 @@ services:
       target: local
     restart: always
     environment:
-      DATABASE_URL: postgresql+psycopg2://postgres:password@postgres:5432/shop
+      DATABASE_URL: postgresql+psycopg://postgres:password@postgres:5432/shop
     depends_on:
       postgres:
         condition: service_healthy

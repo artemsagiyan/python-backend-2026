@@ -7,7 +7,7 @@ from sqlalchemy.exc import DBAPIError, OperationalError
 
 URL = os.environ.get(
     "DATABASE_URL",
-    "postgresql+psycopg2://postgres:password@127.0.0.1:7432/shop",
+    "postgresql+psycopg://postgres:password@127.0.0.1:7432/shop",
 )
 
 engine = create_engine(URL, pool_size=8, pool_pre_ping=True)
